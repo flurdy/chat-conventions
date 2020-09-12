@@ -1,4 +1,4 @@
-# chat-conventions
+# Chat conventions
 
 Conventions for organisations use of chat communication tools. E.g. Slack. Suggestions for naming conventions, notifications, type of channels/groups, etc.
 
@@ -17,6 +17,7 @@ Conventions for organisations use of chat communication tools. E.g. Slack. Sugge
 1. Real profile photo and names
 1. Don't hide alerts in channels
 1. Status use
+1. Notifications
 1. Chat convention wiki
 
 
@@ -44,7 +45,7 @@ I would also police this channel to only be official company announcements to pr
 
 ## 3. Random, Randomer, Randomest
 
-A *#random* chat is nice to chat about things that can not be pidgeon holes elsewhere. And as a water cooler for building some bridges.
+A *#random* chat is nice to chat about things that can not be pidgeon holed elsewhere. And as a water-cooler chat for building some bridges.
 
 But if your workspace do not use threads heavily then random becomes very noise and unclear. You might want to add a *#randomer* and *#randomest*, etc. to try to split the conversations. Or insist on using threads...
 
@@ -63,19 +64,23 @@ Subprefixing also helps.
 
 
 Suggstions:
-* "*off-lon-engineering*" to indicate a London office specific engineering chat.
 * "*alt-icehockey*" for discussing ice-hockey.
 * "*dep-wonderdog-random*" for the *Wonderdog* department's random chat.
-* "*proj-rex-profile-public*" for the *Rex* project's profile team's public channel.
 * "*eu-sales-leads*" for collecting sales leads for the European business.
-* "*tool-github-access*" for Github access requests.
+* "*off-lon-engineering*" to indicate a London office specific engineering chat.
+* "*proj-rex-profile-public*" for the *Rex* project's profile team's public channel.
 * "*syd-tmp-social-xmas-2025*" A short lived channel to discuss an upcoming Christmas party in Sydney.
+* "*tool-github-access*" for Github access requests.
 
 If you start to allow unordered root channels like "*#java*", "*#madrid*" or "*#tomstest*" then navigating will start to fail as people cannot see the wood for the trees.
 
 *#dadjokes* and *#catchat* are exempt. They are great and should be mandatory. Though you could put them under an *#alt-* or similar.
 
-Postfix?
+### 4.1 Suffix
+
+Conventions for *-public* or *-private* at the end of public or private team channels and similar will also make navigation easier.
+
+Standardising on others such as *-support* for separating support conversations with other teams may be useful.
 
 ## 5. Robot Police
 
@@ -149,11 +154,58 @@ There might even be bots that replies in threads to an *@here* poster to remind 
 
 ## 11. Real profile photo and names
 
+If your workspace members reach a larger number that everyone wont know each other then you should insist on people putting real profile photos of themselves. Recent, cropped, focussed and easily identified as them.
 
-## 12. Don't hide alerts in channels
+Perhaps use the Id card photos if you have that. They are usually very suitable.
+
+Also make sure real names not nicknames are used.
+
+"Tom the Man" with a profile photo of his football team crest may be what he identify as him. But for someone that does not know it they are useless, and very unprofessional.
+
+Having a photo of a Simpson character, or your children is also useless. This is not facebook. Slack are for most people also a people directory to find people in the company that the don't know.
+
+Perhaps a colleague wonder if this is the *Andy* they just talked to in the lift and need to ask them a follow up question about the problem they discussed. But there are 4 *Andys* in that department and their profile photos are not helpful...
+
+
+## 12. Don't hide alerts in forgotten channels
+
+Slack has over time become an intersection of integration with other services. Mostly for  notification of events. And they can be very useful.
+
+Notifications such as
+* Pull Requests submitted in Github repositories.
+* Build fail in a Continuous Integration service.
+* Production deploys.
+* New stories in Jira, or status changes.
+* Monitoring alerts for production services.
+
+Many teams would create specific channels for these alerts to go into as they believe it would be too much noise to go into their normal chat channels. E.g. a *#proj-rex-profile-jira* channel.
+
+But for most that is where these messages go to die. Most people mute these channels so mostly ignored. So they have no value.
+
+Instead I suggest PRs, "build fails" and similar go into the normal team chat, perhaps their *-private* channel. That way they are not ignored and action quickly. Don't fix the problem of many "build fails" by hiding the alert, fix the actual problem instead.
+
+For critical monitoring alerts I suggest they go into the *-public* channel. That way they are responsed to straight away as it reflects badly on the team. Also external people that might go to the channel to ask why their integration with that team is having issues, they will see straight away there is a serious problem that seems to be the root problem.
+
+Again if there are too many alerts in the *public* channel, fix the root service problem, and perhaps adjust the alerting if needed. But don't remove it from the *-public* channel.
+
 
 
 ## 13. Status use
 
+Most people do not use the status for your user. But it can be useful for some uses. Such as stating that you are offline due to lunch.
 
-## 14. Chat convention wiki
+
+## 14. Notifications
+
+Part of the onboarding should be to teach people to tweak their notifications.
+
+Perhaps with suggestions such as:
+
+* Mute most larger channels.
+* Set notifications to be totally off for weekends and weekday non office hours.
+* And for hardly any notifications for your mobile.
+
+
+## 15. Chat convention wiki
+
+All these conventions should probably be available on a wiki. With details for how to evolve them.
